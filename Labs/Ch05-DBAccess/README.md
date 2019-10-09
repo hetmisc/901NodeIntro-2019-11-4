@@ -5,7 +5,7 @@
 
 ## Directory and files
 
-1. In your \WIP directory, create your working directory: `\WIP\Ch05\`
+1. In your `\WIP` directory, create your working directory: `\WIP\Ch05\`
 
 1. In this directory, create a file called `database-practice.js`
 
@@ -16,7 +16,7 @@
 
 1. Use `npm install` to add dependencies of `bluebird` and `knex`.
 
-1. Modify the database-practice.js file to require:
+1. Modify the `database-practice.js` file to require:
     ```javascript
     const Promise = require("bluebird");
     const knex = require("knex");

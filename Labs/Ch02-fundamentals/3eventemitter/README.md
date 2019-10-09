@@ -7,7 +7,7 @@
 
 ## Dir/File setup
 
-1. In your \WIP directory, create the directory structure \WIP\Ch02\events
+1. In your `\WIP` directory, create the directory structure `\WIP\Ch02\events`
 
 1. Create a file called `events.js`
 
@@ -43,7 +43,7 @@ If you need additional help, ask your instructor or fellow students.
 
 1. Require the events module and store it in a reference called events
 
-    READ: Here we are NOT looking in the local file system for a module as we are not using path indicators such as "./filename.js" but instead using `let events = require(events)`
+    READ: Here we are NOT looking in the local file system for a module as we are not using path indicators such as "./filename.js" but instead using `let events = require('events')`
 
 1. Use the events reference to create an EventEmitter with the keyword new, store this in a reference called emitter.
 

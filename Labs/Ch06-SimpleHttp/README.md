@@ -8,15 +8,15 @@ NOTE: You can refer to the demo code for hints/help on this lab.
 
 ## Dir/File setup
 
-1. In your \WIP directory, create the directory structure `WIP\Ch06\http-server`
+1. In your `\WIP` directory, create the directory structure `WIP\Ch06\http-server`
 
 1. Create a file called `server.js`
 
 ## Steps
 
-1. Inside of server.js require the `http` module and store as const http.
+1. Inside of `server.js` require the `http` module and store as const http.
 
-1. Add this code in server.js. This will be slightly different than the demos, but demonstrates what passing the function handler into createServer does...
+1. Add this code in `server.js`. This will be slightly different than the demos, but demonstrates what passing the function handler into createServer does...
 
     `const server = http.createServer();`
 

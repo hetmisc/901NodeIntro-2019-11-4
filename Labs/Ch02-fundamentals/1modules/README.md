@@ -13,12 +13,12 @@
 
 ### require a Single function:
 
-1. In the main.js file add this line:
+1. In the `main.js` file add this line:
     ```javascript
         const add = require('./add.js');
     ```
 
-    NOTE: The .js extension is optional.
+    NOTE: The `.js` extension is optional.
 
 1. Open a VSCode terminal at this point by right clicking on the file and choosing open at terminal.
 
@@ -70,7 +70,7 @@
         }
     ```
 
-1. In `main.js`, after you require the calculator.js module, create a new instance like this:
+1. In `main.js`, after you require the `calculator.js` module, create a new instance like this:
     ```javascript
         const Calculator = require('./calculator.js');
         const myCalc = new Calculator();
@@ -78,7 +78,7 @@
 
 1. Now call the add function passing two values and console log the result.
     ```javascript
-        console.log(`1+2=`,myCalc.add(1,2));
+        console.log(`1+2=`, myCalc.add(1,2));
     ```
 
 1. Now create subtract and multiply functions and call those with values to test them as well.
@@ -149,7 +149,7 @@
 
 1. Create a `call-band.js` file which uses (requires) the `bands.js` module. Inside, create a band object similar to this:
     ```javascript
-        const beatles = new Band('The Beatles', ['John', 'Paul', 'George', 'Ringo']);
+    const beatles = new Band('The Beatles', ['John', 'Paul', 'George', 'Ringo']);
     ```
     
 1. Call each of the functions and log the output. 
@@ -167,4 +167,4 @@
 1. Create a shape area calculator that has methods for calculating area of a circle given a radius, area of a square given a side, and area of a triangle given base and height.
 Require and use your calculator module.
 
-1. Rewrite the band module in class-band.js - and use ES6 class notation instead.
+1. Rewrite the band module in `class-band.js` - and use ES6 class notation instead.

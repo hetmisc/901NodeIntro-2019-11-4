@@ -5,7 +5,7 @@ You will be viewing an updated project based on our previous projects which demo
 ## New Concepts
 * Access to user-specific data via res.locals
 * Conditional logic in Pug templates
-* Modify fetch-user.js to store the user on res.locals as well, making it available to every template
+* Modify `fetch-user.js` to store the user on res.locals as well, making it available to every template
 
 
 Please follow the steps while viewing the project at:
@@ -13,6 +13,8 @@ Please follow the steps while viewing the project at:
 
 
 ## Steps:
+
+1. Navigate to `\901NodeIntro\Solutions\Ch08\express-server8-4`
 
 1. Note how the `middleware/fetch-user.js` middleware has been modified to also show the currently logged-in user in `res.locals` - this makes it available to all templates as a template local.
 

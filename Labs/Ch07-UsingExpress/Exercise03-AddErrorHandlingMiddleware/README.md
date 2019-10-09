@@ -14,11 +14,11 @@ Please follow the steps while viewing the project at:
 
 ## Steps
 
-1. In server.js - notice the new modules of express-promise-router unhandled-error being used
+1. In `server.js` - notice the new modules of express-promise-router unhandled-error being used
 	
 	```javascript
-		const expressPromiseRouter = require("express-promise-router");
-		const unhandledError = require("unhandled-error");
+	const expressPromiseRouter = require("express-promise-router");
+	const unhandledError = require("unhandled-error");
 	```
 
 1. The Unhandled error module :
@@ -32,12 +32,11 @@ Please follow the steps while viewing the project at:
 1. The `unhandledError()` takes a callback, which will be passed the error.  The call to unhandledError creates an errorReporter which is assigned to a local variable named `errorReporter`: [this is the unhandled error handler]
 
 	```javascript
-		let errorReporter = unhandledError((err) => {
-			/* This should eventually be hooked into some sort of error reporting
-			mechanism. */
-			console.error("UNHANDLED ERROR:", err.stack);
-		});
-
+	let errorReporter = unhandledError((err) => {
+		/* This should eventually be hooked into some sort of error reporting
+		mechanism. */
+		console.error("UNHANDLED ERROR:", err.stack);
+	});
 	```
 
 		The callback that accepts an `err` argument will make a call to `console.error()`, with the `stack` property of the `err` object. This will contain the message and stacktrace for the error.
@@ -52,15 +51,15 @@ Please follow the steps while viewing the project at:
 1. This has now been replaced with the use of an expressPromiserouter instead. 
 
 	```javascript
-		/* All routers and middlewares are wrapped into an express-promise-router to
-		make sure that error handling is consistent throughout the application. */
-		let router = expressPromiseRouter();
+	/* All routers and middlewares are wrapped into an express-promise-router to
+	make sure that error handling is consistent throughout the application. */
+	let router = expressPromiseRouter();
 
-		router.use(express.static(path.join(__dirname, "public")));
+	router.use(express.static(path.join(__dirname, "public")));
 
-		router.use(require("./routes/index.js"));
+	router.use(require("./routes/index.js"));
 
-		app.use(router);
+	app.use(router);
 	```
 
 ### Add middleware error handler
@@ -69,15 +68,14 @@ Please follow the steps while viewing the project at:
 
 1. Review this code. It takes in the errorReporter using object destructuring syntax. 
 	```javascript
-	
-		module.exports = function({errorReporter}) {
+	module.exports = function({errorReporter}) {
 	```
 
 	The state object was passed to this router. It may end up with many properties, but we only care about the errorReporter property. 
 
 	This code is now returning the error handlng middleware we have seen used before. Inside, it uses the errorReporter to report. 	
 
-	Depending on the envuronment either `err.stack` (when in development mode) or `null` (when not in development mode) is used set for the `stackTrace` variable
+	Depending on the environment either `err.stack` (when in development mode) or `null` (when not in development mode) is used set for the `stackTrace` variable
 	
 	The `errorReporter.report()` is called with the `err` object and a new object containing `req` and `res` as properties with the same name.
 
@@ -88,7 +86,7 @@ Please follow the steps while viewing the project at:
 		2. `stackTrace`, containing the variable of the same name
 
 
-	So the call in server.js 
+	So the call in `server.js` 
 	`app.use(require("./middleware/error-handler")(state));`
 
 	requires it, and immediately calls the resulting function with the `state` object as its only argument, and passing the result into a new `app.use()` call that comes right before the existing call to `app.listen()`.
@@ -103,7 +101,7 @@ Please follow the steps while viewing the project at:
 
 	This assured that next is called even when there is an error, and next was not explicitly called.
 
-1. A file has been added to views called error.pug with these contents:
+1. A file has been added to views called `error.pug` with these contents:
 
 	```
 	extends layout

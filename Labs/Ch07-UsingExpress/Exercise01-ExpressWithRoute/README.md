@@ -6,7 +6,7 @@
 
 ## Dir/File setup steps
 
-1. In your \WIP directory, create the directory structure `WIP\Ch07\express-server`
+1. In your `\WIP` directory, create the directory structure `WIP\Ch07\express-server`
 
 1. Create a file called `server.js`
 
@@ -49,7 +49,7 @@
     * A callback (accepting a `req` and `res` argument), that specifies the logic to execute for the route
 
     ```javascript
-        router.get("/", (req, res) => {
+    router.get("/", (req, res) => {
         res.send("Hello world! From the main page");
     });
     ```
@@ -60,7 +60,7 @@
     module.exports = router;
     ```
 
-1. In server.js require the `./routes/index` module, and pass it into a call to `app.use()` - you can do this in one line of code.
+1. In `server.js` require the `./routes/index` module, and pass it into a call to `app.use()` - you can do this in one line of code.
 
 1. Run the server `nodemon server.js`
 

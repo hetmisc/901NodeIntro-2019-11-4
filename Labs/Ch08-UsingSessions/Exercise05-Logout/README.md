@@ -5,13 +5,15 @@ You will be viewing an updated project based on our previous projects which demo
 
 ## New Concepts
 * Add logout button to layout, only visible when user is logged in
-* Add logout route to routes/users.js that destroys the session
+* Add logout route to `routes/users.js` that destroys the session
 
 Please follow the steps while viewing the project at:
-`\901NodeIntro\Solutions\Ch08\express-server8-4`
+`\901NodeIntro\Solutions\Ch08\express-server8-5`
 
 
 ## Steps:
+
+1. Navigate to `\901NodeIntro\Solutions\Ch08\express-server8-5`
 
 1. Note how in `routes/users.js`, a new route for `/logout` has been added - this route will destroy the session that the user has (effectively logging them out), and then redirects them back to `/`.
 

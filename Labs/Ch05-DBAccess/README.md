@@ -23,7 +23,7 @@
     let db = knex(require("./knexfile"));
     ```
 
-1. In your working directory, create a `knexfile.js` in order to connect to a database called `lab05` 
+1. In your working directory, create a `knexfile.js` in order to connect to a database called `example05` 
 
     ```javascript
     module.exports = {
@@ -32,7 +32,7 @@
             host: "localhost",
             user: "postgres",
             password: "password",
-            database: "lab05"
+            database: "example05"
         }
     };
     ```

@@ -12,10 +12,11 @@ Promise.try(() => {
 	});
 }).then(() => {
 	console.log("Changed name of all the Joes!");
-
 	return db("people");
 }).then((people) => {
 	console.log("Now, all the people:", people);
+}).catch((error) => {
+	console.log(error)
 }).finally(() => {
 	db.destroy();
 });

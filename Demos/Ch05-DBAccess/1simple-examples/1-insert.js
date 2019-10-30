@@ -1,9 +1,6 @@
-
-
 const Promise = require("bluebird");
 const knex = require("knex");
 let db = knex(require("./knexfile"));
-
 Promise.try(() => {
 	return db("people").insert([{
 		firstName: "Joe",
@@ -14,20 +11,14 @@ Promise.try(() => {
 		lastName: "Smith",
 		age: 52
 	}, {
-		firstName: "John",
-		lastName: "Doe",
-		age: 21
-	}, {
-		firstName: "Jane",
-		lastName: "Doe",
-		age: 23
-	}, {
 		firstName: "Beth",
 		lastName: "Smith",
 		age: 24
 	}]);
 }).then(() => {
 	console.log("Done!");
+}).catch((error) => {
+	console.log(error)
 }).finally(() => {
 	db.destroy();
 });

@@ -10,6 +10,9 @@ Promise.try(() => {
 	});
 }).then((people) => {
 	console.log("All the people named Joe:", people);
+}).catch((error) => {
+	console.log(error)
 }).finally(() => {
 	db.destroy();
 });
+

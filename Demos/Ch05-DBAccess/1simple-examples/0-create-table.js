@@ -1,5 +1,3 @@
-
-
 const Promise = require("bluebird");
 const knex = require("knex");
 let db = knex(require("./knexfile"));
@@ -12,7 +10,9 @@ Promise.try(() => {
 		table.integer("age");
 	});
 }).then(() => {
-	console.log("Done!");
+	console.log("Done!");	
+}).catch((error) => {
+	console.log(error)
 }).finally(() => {
 	db.destroy();
 });

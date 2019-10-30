@@ -8,6 +8,9 @@ Promise.try(() => {
 	return db("people");
 }).then((people) => {
 	console.log("All the people:", people);
+	console.log("\nwithout anonymous:", JSON.stringify(people))
+}).catch((error) => {
+	console.log(error)
 }).finally(() => {
 	db.destroy();
 });

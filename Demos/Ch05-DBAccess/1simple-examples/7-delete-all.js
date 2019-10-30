@@ -12,6 +12,8 @@ Promise.try(() => {
 	return db("people");
 }).then((people) => {
 	console.log("Now, all the people:", people);
+}).catch((error) => {
+	console.log(error)
 }).finally(() => {
 	db.destroy();
 });

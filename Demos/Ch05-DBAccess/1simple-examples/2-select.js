@@ -2,7 +2,7 @@
 
 const Promise = require("bluebird");
 const knex = require("knex");
-let db = knex(require("./knexfile"));
+let db = knex(require("../knexfile"));
 
 Promise.try(() => {
 	return db("people");

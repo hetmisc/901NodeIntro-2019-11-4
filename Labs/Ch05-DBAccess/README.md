@@ -23,7 +23,7 @@
     let db = knex(require("./knexfile"));
     ```
 
-1. In your working directory, create a `knexfile.js` in order to connect to a database called `example05` 
+1. In your working directory, create a `knexfile.js` in order to connect to the database called `practice` 
 
     ```javascript
     module.exports = {
@@ -32,19 +32,19 @@
             host: "localhost",
             user: "postgres",
             password: "password",
-            database: "example05"
+            database: "practice"
         }
     };
     ```
 
 1. Open the PgAdmin (or other) client program to work with Postgres.
 
-1. Create the database called `lab05` - it is empty for now.
+2. If you did not already create it during the demos, create the database called `practice`.
 
-1. Add code to the `database-practice.js` file to create a table called `customer`, with fields for `firstname`, `lastname` and `email`.
+3. Add code to the `database-practice.js` file to create a table called `customer`, with fields for `firstname`, `lastname` and `email`.
 
-1. Add two records to this table.
+4. Add two records to this table.
 
-1. Select the records and display them in the console.
+5. Select the records and display them in the console.
 
-1. Execute your new code and view console. you can also look in the database for the created records.
+6. Execute your new code and view console. you can also look in the database for the created records.

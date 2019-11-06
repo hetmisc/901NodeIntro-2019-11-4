@@ -14,16 +14,20 @@
 
 1. In the new Ch05 directory, create a `package.json` file using `npm init -y`.
 
-1. Use `npm install` to add dependencies of `bluebird` and `knex`.
+1. Use `npm install` to add dependencies of `bluebird` and `knex` and `db`.
 
-1. Modify the `database-practice.js` file to require:
+    This can be done using spaces between packages to get all of them:
+    
+    npm install bluebird knex db
+
+2. Modify the `database-practice.js` file to require:
     ```javascript
     const Promise = require("bluebird");
     const knex = require("knex");
     let db = knex(require("./knexfile"));
     ```
 
-1. In your working directory, create a `knexfile.js` in order to connect to the database called `practice` 
+3. In your working directory, create a `knexfile.js` in order to connect to the database called `practice` 
 
     ```javascript
     module.exports = {
@@ -37,14 +41,14 @@
     };
     ```
 
-1. Open the PgAdmin (or other) client program to work with Postgres.
+4. Open the PgAdmin (or other) client program to work with Postgres.
 
-2. If you did not already create it during the demos, create the database called `practice`.
+5. If you did not already create it during the demos, create the database called `practice`.
 
-3. Add code to the `database-practice.js` file to create a table called `customer`, with fields for `firstname`, `lastname` and `email`.
+6. Add code to the `database-practice.js` file to create a table called `customer`, with fields for `firstname`, `lastname` and `email`.
 
-4. Add two records to this table.
+7. Add two records to this table.
 
-5. Select the records and display them in the console.
+8. Select the records and display them in the console.
 
-6. Execute your new code and view console. you can also look in the database for the created records.
+9.  Execute your new code and view console. you can also look in the database for the created records.
